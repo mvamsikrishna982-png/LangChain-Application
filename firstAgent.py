@@ -4,7 +4,10 @@ from langchain_groq import ChatGroq
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage
 from langchain_core.tools import tool
+from tavily import TavilyClient
 load_dotenv()
+
+tavily = TavilyClient()
 
 @tool
 def search(query:str)->str:
@@ -17,7 +20,7 @@ def search(query:str)->str:
         The search result
     """
     print("This is the input query:",query)
-    return "chicago is very sunny today"
+    return tavily.search(query)
 
 
 
