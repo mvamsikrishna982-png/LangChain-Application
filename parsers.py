@@ -28,7 +28,7 @@ print(chain.invoke({'topic':'dropout'}))
 
 
 ################# JsonOutputParseer ###############
-When LLM respoonds in JSON this parserr converts that into a python dict.
+# When LLM respoonds in JSON this parserr converts that into a python dict.
 
 prompt = ChatPromptTemplate.from_messages(
     [
